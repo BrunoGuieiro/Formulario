@@ -1,58 +1,391 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validador de Formulário</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Guieiro — Portifolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div class="container">
-        <h1>Formulário de Cadastro</h1>
-        <form id="validationForm">
-            <div class="form-group">
-                <label for="name">Nome Completo *</label>
-                <input type="text" id="name" placeholder="Digite seu nome completo">
-                <span class="error-message" id="nameError">Por favor, insira seu nome completo</span>
-            </div>
 
-            <div class="form-group">
-                <label for="email">E-mail *</label>
-                <input type="email" id="email" placeholder="seuemail@gmail.com">
-                <span class="error-message" id="emailError">Por favor, insira um e-mail Gmail válido</span>
-            </div>
+  <nav id="menu-navegacao">
+    <div class="menu-interno">
 
-            <div class="form-group">
-                <label for="cpf">CPF *</label>
-                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
-                <span class="error-message" id="cpfError">Por favor, insira um CPF válido</span>
-            </div>
+      <a href="#inicio" class="menu-logo">Bruno Guieiro</a>
 
-            <div class="form-group">
-                <label for="phone">Telefone *</label>
-                <input type="tel" id="phone" placeholder="(00) 00000-0000" maxlength="15">
-                <span class="error-message" id="phoneError">Por favor, insira um telefone válido</span>
-            </div>
+      <ul class="menu-links" id="menu-links">
+        <li><a href="#inicio" class="menu-item ativo">Inicio</a></li>
+        <li><a href="#sobre" class="menu-item">Sobre</a></li>
+        <li><a href="#habilidades" class="menu-item">Habilidades</a></li>
+        <li><a href="#projetos" class="menu-item">Projetos</a></li>
+        <li><a href="#contato" class="menu-item">Contato</a></li>
+      </ul>
 
-            <div class="form-group">
-                <label for="message">Mensagem *</label>
-                <textarea id="message" rows="4" placeholder="Digite sua mensagem"></textarea>
-                <span class="error-message" id="messageError">Por favor, insira uma mensagem</span>
-            </div>
+      <button class="botao-menu" id="botao-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <button type="submit">Enviar Formulário</button>
-        </form>
+    </div>
+  </nav>
+
+
+  <section id="inicio" class="secao-inicio">
+
+    <div class="fundo-grade"></div>
+
+    <div class="conteudo-inicio">
+
+      <h1 class="titulo-nome">Bruno Guieiro Lessa</h1>
+
+      <p class="titulo-cargo">
+        <span id="texto-digitado"></span><span class="cursor-piscando">|</span>
+      </p>
+
+      <p class="frase-inicio">
+        Focado em aprender e evoluir cada vez mais na tecnologia.
+      </p>
+
+      <div class="botoes-inicio">
+        <a href="#projetos" class="botao-azul">Ver Projetos</a>
+        <a href="#contato" class="botao-borda">Contato</a>
+      </div>
+
     </div>
 
-    <div class="success-modal" id="successModal">
-        <div class="modal-content">
-            <div class="checkmark">✓</div>
-            <h2>Sucesso!</h2>
-            <p>Seu formulário foi enviado com sucesso.</p>
-            <button class="close-btn" onclick="closeModal()">Fechar</button>
+  </section>
+
+
+  <section id="sobre" class="secao-sobre">
+
+    <div class="secao-cabecalho">
+      <h2>Sobre <span class="destaque">Mim</span></h2>
+      <div class="linha-secao"></div>
+    </div>
+
+    <div class="grade-sobre">
+
+      <div class="texto-sobre">
+        <p>
+          Olá, sou o Bruno, tenho 16 anos e atualmente estou no 3º ano do ensino médio técnico
+          no COTEMIG, cursando desenvolvimento Web e Mobile. Ao longo da minha formação, venho
+          desenvolvendo habilidades incluindo C#, HTML, CSS, React, MySQL, Python, Flutter, Swift
+          e Kotlin, além de estar sempre buscando expandir meus conhecimentos em programação e
+          tecnologia.
+        </p>
+        <p>
+          Sou uma pessoa responsável, organizada e sempre disposta a aprender coisas novas.
+          Tenho bastante interesse em entender como a tecnologia funciona por trás dos sistemas
+          e busco evoluir, tanto nas habilidades técnicas quanto nas comportamentais.
+        </p>
+        <p>
+          Busco oportunidades de estágio na área de tecnologia para colocar em prática o que
+          venho aprendendo.
+        </p>
+
+        <div class="lista-info">
+          <span class="info-item">Belo Horizonte, MG</span>
         </div>
+      </div>
+
+      <div class="lateral-sobre">
+        <div class="caixa-foto">
+          <div class="foto-placeholder">
+            <img src="img/img-fotoperfil.jpg" alt="minha-foto" width="100%">
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <div class="cartao-formacao">
+      <div class="formacao-texto">
+        <h4>Técnico em Informática</h4>
+        <p>Colégio Cotemig</p>
+        <div class="formacao-rodape">
+          <span class="etiqueta-andamento">Em andamento</span>
+          <span class="formacao-periodo">2024 – 2026</span>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section id="habilidades" class="secao-habilidades fundo-alternado">
+
+    <div class="secao-cabecalho">
+      <h2>Habili<span class="destaque">dades</span></h2>
+      <div class="linha-secao"></div>
+    </div>
+
+    <div class="grade-habilidades">
+
+      <div class="categoria-habilidade">
+        <h3 class="titulo-categoria">&lt;/&gt; Front-End</h3>
+        <div class="lista-habilidades">
+          <div class="item-habilidade">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-react-original colored"></i>
+            <span>React</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria-habilidade">
+        <h3 class="titulo-categoria">&lt;/&gt; Back-End</h3>
+        <div class="lista-habilidades">
+          <div class="item-habilidade">
+            <i class="devicon-csharp-plain colored"></i>
+            <span>C#</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria-habilidade">
+        <h3 class="titulo-categoria">&lt;/&gt; Mobile</h3>
+        <div class="lista-habilidades">
+          <div class="item-habilidade">
+            <i class="devicon-flutter-plain colored"></i>
+            <span>Flutter</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-swift-plain colored"></i>
+            <span>Swift</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-kotlin-plain colored"></i>
+            <span>Kotlin</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria-habilidade">
+        <h3 class="titulo-categoria">&lt;/&gt; Banco de Dados</h3>
+        <div class="lista-habilidades">
+          <div class="item-habilidade">
+            <i class="devicon-mysql-plain colored"></i>
+            <span>MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categoria-habilidade">
+        <h3 class="titulo-categoria">&lt;/&gt; Ferramentas</h3>
+        <div class="lista-habilidades">
+          <div class="item-habilidade">
+            <span class="icone-excel">X</span>
+            <span>Pacote Office</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="item-habilidade">
+            <i class="devicon-google-original colored"></i>
+            <span>Google Workspace</span>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+  <section id="projetos" class="secao-projetos fundo-alternado">
+
+    <div class="secao-cabecalho">
+      <h2>Pro<span class="destaque">jetos</span></h2>
+      <div class="linha-secao"></div>
+    </div>
+
+    <div class="grade-projetos">
+
+      <div class="cartao-projeto">
+        <div class="projeto-topo">
+          <span class="projeto-icone"></span>
+          <a href="https://github.com/BrunoGuieiro" target="_blank" class="link-github">GitHub ↗</a>
+        </div>
+        <h3 class="projeto-nome">Gerenciador de Tarefas</h3>
+        <p class="projeto-descricao">
+          Aplicação web para criação, organização e controle de tarefas do dia a dia,
+          com interface intuitiva e responsiva.
+        </p>
+        <div class="projeto-tecnologias">
+          <span class="etiqueta-tech">React</span>
+        </div>
+      </div>
+
+      <div class="cartao-projeto">
+        <div class="projeto-topo">
+          <span class="projeto-icone"></span>
+          <a href="https://github.com/BrunoGuieiro" target="_blank" class="link-github">GitHub ↗</a>
+        </div>
+        <h3 class="projeto-nome">Sistema de Login com BD</h3>
+        <p class="projeto-descricao">
+          Sistema de autenticação completo com banco de dados, incluindo cadastro,
+          login e controle de sessão do usuário.
+        </p>
+        <div class="projeto-tecnologias">
+          <span class="etiqueta-tech">Python</span>
+          <span class="etiqueta-tech">MySQL</span>
+          <span class="etiqueta-tech">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="cartao-projeto">
+        <div class="projeto-topo">
+          <span class="projeto-icone"></span>
+          <a href="https://github.com/BrunoGuieiro/Formulario" target="_blank" class="link-github">GitHub ↗</a>
+        </div>
+        <h3 class="projeto-nome">Formulário</h3>
+        <p class="projeto-descricao">
+          Formulário responsivo com validação de campos em tempo real,
+          feedback visual e tratamento de erros ao usuário.
+        </p>
+        <div class="projeto-tecnologias">
+          <span class="etiqueta-tech">HTML</span>
+          <span class="etiqueta-tech">CSS</span>
+          <span class="etiqueta-tech">JavaScript</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projetos-rodape">
+      <a href="https://github.com/BrunoGuieiro" target="_blank" class="botao-borda">
+        Ver todos no GitHub ↗
+      </a>
+    </div>
+
+  </section>
+
+
+  <section id="contato" class="secao-contato">
+
+    <div class="secao-cabecalho">
+      <h2>Con<span class="destaque">tato</span></h2>
+      <div class="linha-secao"></div>
+    </div>
+
+    <div class="grade-contato">
+
+      <div class="informacoes-contato">
+
+        <p class="texto-contato">
+          Tem uma oportunidade de estágio ou quer trocar uma ideia? Manda mensagem!
+        </p>
+
+        <ul class="lista-contatos">
+          <li>
+            <a href="mailto:lessabrunoguieiro@gmail.com" class="item-contato">
+              <span class="contato-icone">✉</span>
+              <div>
+                <span class="contato-rotulo">Email</span>
+                <span class="contato-valor">lessabrunoguieiro@gmail.com</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+5531978462477" class="item-contato">
+              <span class="contato-icone">☎</span>
+              <div>
+                <span class="contato-rotulo">Telefone</span>
+                <span class="contato-valor">(31) 9784-6247</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/bruno-guieiro-lessa-5bb430391" target="_blank" class="item-contato">
+              <span class="contato-icone">in</span>
+              <div>
+                <span class="contato-rotulo">LinkedIn</span>
+                <span class="contato-valor">bruno-guieiro-lessa</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Bruno-Guieiro" target="_blank" class="item-contato">
+              <span class="contato-icone"><i class="devicon-github-original"></i></span>
+              <div>
+                <span class="contato-rotulo">GitHub</span>
+                <span class="contato-valor">Bruno-Guieiro</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="botoes-sociais">
+          <a href="https://linkedin.com/in/bruno-guieiro-lessa-5bb430391" target="_blank"
+            class="botao-azul">LinkedIn</a>
+          <a href="https://github.com/BrunoGuieiro" target="_blank" class="botao-borda">GitHub</a>
+        </div>
+
+      </div>
+
+      <form class="formulario-contato" id="formulario-contato" novalidate>
+
+        <div class="linha-formulario">
+          <div class="campo-formulario">
+            <label for="campo-nome">Nome</label>
+            <input type="text" id="campo-nome" placeholder="Seu nome" required />
+          </div>
+          <div class="campo-formulario">
+            <label for="campo-email">Email</label>
+            <input type="email" id="campo-email" placeholder="seu@email.com" required />
+          </div>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="campo-assunto">Assunto</label>
+          <input type="text" id="campo-assunto" placeholder="Assunto da mensagem" required />
+        </div>
+
+        <div class="campo-formulario">
+          <label for="campo-mensagem">Mensagem</label>
+          <textarea id="campo-mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+        </div>
+
+        <button type="submit" class="botao-azul botao-cheio" disabled>
+          Enviar Mensagem 
+        </button>
+
+        <p class="resposta-formulario" id="resposta-formulario"></p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <footer class="rodape">
+    <p>Desenvolvido por <span class="destaque">Bruno Guieiro</span> — 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>
